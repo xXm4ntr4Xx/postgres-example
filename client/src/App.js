@@ -10,7 +10,7 @@ function App() {
   const takeData = async()=>{
       const response = await fetch(URL)
       const datainfo = await response.json();
-      console.log(datainfo.payload[0])
+      console.log(datainfo.payload)
 
   }
 //post new data
@@ -21,7 +21,7 @@ function App() {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({name:'tom',username:'cruise'})
+      body: JSON.stringify({name:'ggg',username:'nastofel'})
     })
     const data = await response.json();
     console.log(data)
