@@ -40,7 +40,7 @@ function App() {
 
   const submitOption = (e)=>{
     e.preventDefault()
-    postDAta()
+    // postDAta() function for post new user on database
     
   }
 
