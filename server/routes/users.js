@@ -1,19 +1,36 @@
 import express from "express";
-// import pool from "../db";
+import pkg from 'pg';
+import dotenv from 'dotenv';
 
+
+dotenv.config();
+
+const { Pool } = pkg;
 const router = express.Router();
 
+
+
+
+
+
+ const credentials = {
+    database:process.env.PGDATABASE,//db name
+    user:process.env.PGUSER,
+    password:process.env.PGPASSWORD,//pass
+    host:process.env.PGHOST,
+    port:process.env.PGPORT
+}
 
 /* GET users listing. */
 
   
 router.get('/',async(req,res)=>{
-  // let todoId= req.params.id
-  // pool.query('SELECT * FROM todo WHERE id = $1',[todoId])
-  // res.json({
-  //   message:'complete',
-  //   payload:res.rows
-  // })
+  const pool = new Pool(credentials);
+  const all = await pool.query('SELECT * FROM person')
+  res.json({
+    message:'complete',
+    payload: all.rows
+  })
 })
 
 
