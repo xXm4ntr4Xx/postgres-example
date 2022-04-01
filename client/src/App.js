@@ -5,13 +5,15 @@ function App() {
 
   const URL = 'http://localhost:3000/api';
 
+
+  //fetch all data
   const takeData = async()=>{
       const response = await fetch(URL)
       const datainfo = await response.json();
       console.log(datainfo.payload[0])
 
   }
-
+//post new data
   const postDAta = async()=>{
     const response = await fetch(URL,{
       method: 'POST',
@@ -19,10 +21,11 @@ function App() {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({name:'marc',username:'green'})
+      body: JSON.stringify({name:'tom',username:'cruise'})
     })
     const data = await response.json();
     console.log(data)
+    return data
   }
 
   

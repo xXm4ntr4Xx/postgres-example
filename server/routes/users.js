@@ -30,7 +30,16 @@ router.get('/',async(req,res)=>{
   })
 })
 
-
+router.post('/',async(req,res)=>{
+  const pool = new Pool(credentials);
+  const{name,username}=req.body
+  const newPerson = await pool.query('INSERT INTO person(name,username) VALUES($1,$2)',[name,username])
+  console.log(req.body)
+  res.json({
+    message:'added',
+    payload:newPerson
+  })
+})
 
 
 
