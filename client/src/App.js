@@ -1,23 +1,57 @@
-import logo from './logo.svg';
+import {useState,useEffect} from 'react';
 import './App.css';
 
 function App() {
+
+  const URL = 'http://localhost:3000/api';
+
+  const takeData = async()=>{
+      const response = await fetch(URL)
+      const datainfo = await response.json();
+      console.log(datainfo.payload[0])
+
+  }
+
+  const postDAta = async()=>{
+    const response = await fetch(URL,{
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({name:'marc',username:'green'})
+    })
+    const data = await response.json();
+    console.log(data)
+  }
+
+  
+
+  useEffect(()=>{
+    takeData();
+  },[])
+
+  const handleOption = (e) =>{
+    console.log(e.target.value)
+  }
+
+  const submitOption = (e)=>{
+    e.preventDefault()
+    postDAta()
+    
+  }
+
+
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>hello</h1>
+
+      <form method='post' onSubmit={submitOption}>
+          <input type={'text'} onChange={handleOption}/>
+          <button>Submit</button>
+      </form>
     </div>
   );
 }

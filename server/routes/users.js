@@ -20,7 +20,7 @@ const router = express.Router();
 
 /* GET users listing. */
 
-  
+
 router.get('/',async(req,res)=>{
   const pool = new Pool(credentials);
   const all = await pool.query('SELECT * FROM person')
