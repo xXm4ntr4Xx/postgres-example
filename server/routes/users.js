@@ -9,10 +9,7 @@ const { Pool } = pkg;
 const router = express.Router();
 
 
-
-
-
-
+//my credential
  const credentials = {
     database:process.env.PGDATABASE,//db name
     user:process.env.PGUSER,
