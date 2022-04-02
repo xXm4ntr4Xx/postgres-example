@@ -51,12 +51,12 @@ this is the array before the submit...
  
  <img width="377" alt="Screenshot 2022-04-02 at 22 11 54" src="https://user-images.githubusercontent.com/74420607/161401377-6bb778f9-fa6d-4036-b14c-7b9ab285f2fa.png">
 <hr/>
-9. we can also check on posgres shell command...
--we enter our databse infos
-- we list all the database using (\l) command;
-- we connect to  the relative table on the list(our person are in the example database) using (\c) command
-- we list all the table avilable on selected database using the (\dt) command
--we can now use our classic query method to call everything from the person table and we can also see our last post request 
+9. we can also check on posgres shell command...<br/>
+-we enter our databse infos<br/>
+- we list all the database using (\l) command;<br/>
+- we connect to  the relative table on the list(our person are in the example database) using (\c) command<br/>
+- we list all the table avilable on selected database using the (\dt) command<br/>
+-we can now use our classic query method to call everything from the person table and we can also see our last post request <br/>
 
 <img width="557" alt="Screenshot 2022-04-02 at 22 22 05" src="https://user-images.githubusercontent.com/74420607/161401632-5c61e2b9-ca67-44a2-b687-1bd14c58d623.png">
 <hr/>
