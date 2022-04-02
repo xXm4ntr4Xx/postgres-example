@@ -9,7 +9,7 @@ The exercise consist on create a react application connecting frontend(React) an
 
 <img width="242" alt="Screenshot 2022-04-02 at 21 49 09" src="https://user-images.githubusercontent.com/74420607/161400732-aa50e710-dde9-4f7a-a1e3-9f502f363e66.png">
 
-2.We coing to use connection pool to connect to postgres so we install pkg dependency and  dotenv file to start the connection.
+2.We are going to use the connection pool to connect to postgres so we install pkg dependency and  dotenv file to start the connection.
 
 <img width="219" alt="Screenshot 2022-04-02 at 21 52 54" src="https://user-images.githubusercontent.com/74420607/161400839-ce67858b-3dc4-4a95-b419-cf4e5dd05b09.png">
 
